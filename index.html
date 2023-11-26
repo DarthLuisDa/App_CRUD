@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="styles.css"> <!-- Enlace al CSS -->
 </head>
 <!-- Seccion Body. Contiene el Link al JS(pagina de funciones) -->
-<body onload="renderTasks()">
+<body onload="renderTasks()"> <!-- Actualiza Lista de Tareas -->
 
   <!-- Primera seccion del Body. Contiene cuadro de "Nueva Tarea" y el Boton "Agregar". Se hace notar la estructura DOM 20%.  -->
   <div class="container"> 
@@ -34,7 +34,7 @@
      <!-- Seccion Footer 5%. Despliegue de Ventana para actualizar -->
          <div class="footer" id="editModal" style="display: none;">
             <input type="text" id="editInput" placeholder="Editar tarea">
-            <button onclick="updateTask()">Actualizar</button>
+            <button id="actualizar" onclick="updateTask()">Actualizar</button>
          </div>
 
      </div>

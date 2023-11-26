@@ -1,95 +1,104 @@
 /* Estilo general para el cuerpo de la página */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    background-color: #282f3a;
+    background-color: #333;  /* Color de Fondo General */
+    display: flex;   /* Alineacion de acuerdo a pantalla. Tambien tiene que ver con hacerlo Responsivo.10% */
+    justify-content: center; /* Alineacion izquierda-derecha */
+    align-items: center; /* Alineacion arriba-abajo */
+    min-height: 100vh; /* Tambien tiene que ver con lo Responsivo 10% */
+    background-image:url(symbol_empire.png);
   }
   
   /* Estilo para el contenedor de la tarjeta */
-  .container {
-    background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    max-width: 400px;
-   
+  .container /* Enlace a etiqueta HTML */{
+    border: 5px solid; /* Borde Tarjeta */
+    border-color: #16191f;   /* Color Borde Tarjeta */
+    background-color: #25b1ca;   /* Color Tarjeta */
+    padding: 50px;  /* Alto Tarjeta */
+    border-radius: 20px;  /* Borde de la Tarjeta */
+    text-align: center;   /* Alineacion Texto */
+    max-width: 500px;   /*  Ancho Tarjeta
+    */
   }
   
   /* Estilo para el título de la tarjeta */
-  .card h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  /* Estilo para el área de entrada de tarea y botón */
-  .card input[type="text"] {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 10px;
-  }
-  
-  .card button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  /* Estilo para la lista de tareas */
-#taskList {
-    list-style: none;
-    padding: 0;
-  }
-  
-  #taskList li {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 5px;
-
-  }
-  
-  #taskList li span {
-    flex: 1;
-    text-align: left;
+  .card h1 /* Enlace a etiqueta HTML */{
+    font-size: 30px;  /* Tamanio Frase "Nueva Tarea" */
+    margin-bottom: 20px;    /* Margen de separacion  */
     
   }
   
+  /* Estilo para el área de entrada de tarea*/
+  .card input/* Enlace a etiqueta del HTML */[type="text"] /* Enlace al texto */ {
+    font-weight: bold;
+    background-color: whitesmoke;  /* Fondo Recuadro */
+    font-size: 17px;  /* "Tamanio Frase "Escribir Tarea" */
+    padding: 10px;  /* Tamanio Recuadro */
+    border: 3px solid; /* Borde Recuadro Escribir Tarea */
+    border-color: #16191f;  /* Color Borde "Escribir Tarea" */
+    border-radius: 7px;  /* Tamanio Borde */
+    margin-right: 10px;  /* Separacion con el boton */
+    
+  }
+  
+  /*Estilo para el boton de agregar tarea*/
+  .card button/* Enlace a etiqueta HTML */ {
+    font-weight: bold;
+    font-size: 17px; /* "Tamanio Frase "Agregar" */
+    background-color: #086a77;
+    color: #16191f;
+    border: 3px solid; /* Borde Boton "Agregar" */
+    border-color: #16191f;  /* Color Borde "Agregar" */
+    border-radius: 7px;  /* Tamanio Borde */
+    padding: 10px 20px;  /* Tamanio ancho-alto del boton */
+    cursor: pointer;  /* Muestra manita */
+  }
+  
+
+
+
+  /* Estilo para seccion "Mi Lista de tareas" */
+#taskList /* Se conecta el elemento "taskList" del HTML gracias a su id */ {
+    font-weight: bold;
+    font-size: 20px; /* "Tamanio Frase "Agregar" */background-color: #087381;
+    color: #16191f;
+    background-color: whitesmoke; /* Color de Seccion */
+    padding: 0;  /* Tamanio de la seccion "Lista Tareas" */
+    border: 2px solid; /* Borde Boton "Agregar" */
+    border-color: #16191f;  /* Color Borde "Agregar" */
+    border-radius: 7px;  /* Tamanio Borde */
+}
+
+   /* Estilo para seccion "Mi Lista de tareas" */
+#taskList li /* Conectamos la variable "ListItem" con "li" */{
+    display: flex;   /* Alineacion deacuerdo a Lista de Tareas */
+    align-items: center;  /*  Centrar Items */
+    padding: 10px;   /* Separacion de Tarea por Tarea */
+    border: 2px solid; /* Borde Tarea por Tarea */
+    border-color: #16191f;  /* Color Borde Tarea por Tarea */    
+  }
+  
   /* Estilo para los botones de editar y borrar */
-  li button {
-    margin-left: 10px;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+#taskList li button {
+
+    margin-right: 5px; /* Margen a la derecha */
+    margin-left: 5px; /* Margen a la Izquierda */
+    cursor: pointer;  /* Muestra manita */
   }
   
- /* Estilo para los botones de editar y borrar */
-li button.edit-button {
-    background-color: #FFC436; /* Cambia el color a azul */
-    color: #fff;
+ /* Color para boton editar */
+#taskList li button.edit-Button {
+    background-color: #FFC436; 
+    
   }
+
+  /* Color para boton borrar */
+#taskList li button.delete-Button {
+    background-color: #f32828; 
+   
+}
   
-  li button.delete-button {
-    background-color: #FF3333; /* Cambia el color a rojo */
-    color: #fff;
-  }
-  
- /*  Estilo para el Footer */
- footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin-top: 800px;
-    background-color: #282f3a;
-  }
+ 
+/*  Estilo para el Footer */
+#editModal.footer button {
+    background-color: rgb(59, 148, 66); 
+}
