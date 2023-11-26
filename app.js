@@ -98,8 +98,8 @@
        deleteTask(index);
      };
 
-     listItem.appendChild(editButton);
-     listItem.appendChild(deleteButton);
-     taskList.appendChild(listItem);
+     listItem.appendChild(editButton);  /* Agrega el boton editar al elemento li(ListItem) */
+     listItem.appendChild(deleteButton);  /* Agrega el boton eliminar/borrar al elemento li(ListItem)*/
+     taskList.appendChild(listItem);  /* Agrega el elemento li(ListItem) a la lista de Tareas */
    });
  }
