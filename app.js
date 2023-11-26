@@ -86,7 +86,7 @@
      };
 
      var deleteButton = document.createElement("button");
-     deleteButton.innerText = "Eliminar";
+     deleteButton.innerText = "Borrar";
      deleteButton.onclick = function() {
        deleteTask(index);
      };
