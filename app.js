@@ -80,21 +80,21 @@
    tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
    // Renderizar las tareas en la lista
-   tasks.forEach(function(task, index) {
-     var listItem = document.createElement("li");
+   tasks.forEach(function(task, index) {  /* LLama al metodo forEach(),funcion callback */
+     var listItem = document.createElement("li");   /* Se declara la variable Item de Lista */
      listItem.innerText = task;
 
-     var editButton = document.createElement("button");
+     var editButton = document.createElement("button");  /* Se declara la variable editar */
      editButton.className = 'edit-Button';  /* Se declara el nombre de la clase para conectar CSS */
-     editButton.innerText = "Editar";
-     editButton.onclick = function() {
+     editButton.innerText = "Editar";    /* Asigna el Texto al Boton editar */
+     editButton.onclick = function() {/* Edita el elemento al momento de dar click */
        editTask(index);
      };
 
-     var deleteButton = document.createElement("button");
+     var deleteButton = document.createElement("button");  /* Se declara la variable borrar */
      deleteButton.className = 'delete-Button'; /* Se declara el nombre de la clase para conectar CSS */
-     deleteButton.innerText = "Borrar";
-     deleteButton.onclick = function() {
+     deleteButton.innerText = "Borrar";    /* Asigna el Texto al Boton borrar */
+     deleteButton.onclick = function() {  /* Borrar el elemento al momento de dar click */
        deleteTask(index);
      };
 
