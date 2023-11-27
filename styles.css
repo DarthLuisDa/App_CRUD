@@ -5,7 +5,6 @@ body {
     justify-content: center; /* Alineacion izquierda-derecha */
     align-items: center; /* Alineacion arriba-abajo */
     min-height: 100vh; /* Tambien tiene que ver con lo Responsivo 10% */
-    background-image:url(symbol_empire.png);
   }
   
   /* Estilo para el contenedor de la tarjeta */
