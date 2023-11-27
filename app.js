@@ -1,5 +1,7 @@
+let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+ 
  // Iniciar objetos vacíos. Declaracion de Variables. Estructura DOM 20%.
- var tasks = [];
+ //var tasks = [];
  var taskIndex;
 
  /* Funcion para aniadir Tareas al momento de dar click "Agregar".5% */ 
