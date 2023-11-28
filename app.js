@@ -44,6 +44,9 @@
    // Obtener el nuevo valor del input de edición
    var updatedTask = document.getElementById("editInput").value;
 
+   // Obtener el índice de la tarea a editar
+  var taskIndex = this.taskIndex;
+
    // Actualizar el valor en el arreglo
    tasks[taskIndex] = updatedTask;
 
