@@ -2,6 +2,44 @@
  var tasks = [];
  var taskIndex;
 
+/* Funcion para renderizar las tareas de la lista */
+function renderTasks() {
+  // Obtener el elemento de la lista de tareas
+  var taskList = document.getElementById("taskList");
+
+  // Limpiar la lista antes de renderizar las tareas
+  taskList.innerHTML = "";
+
+  // Obtener el arreglo de tareas almacenado en Local Storage
+  tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+  // Renderizar las tareas en la lista
+  tasks.forEach(function(task, index) {  /* LLama al metodo forEach(),funcion callback */
+    var listItem = document.createElement("li");   /* Se declara la variable Item de Lista */
+    listItem.innerText = task;
+
+    var editButton = document.createElement("button");  /* Se declara la variable editar */
+    editButton.className = 'edit-Button';  /* Se declara el nombre de la clase para conectar CSS */
+    editButton.innerText = "Editar";    /* Asigna el Texto al Boton editar */
+    editButton.onclick = function() {/* Edita el elemento al momento de dar click */
+      editTask(index);
+    };
+
+    var deleteButton = document.createElement("button");  /* Se declara la variable borrar */
+    deleteButton.className = 'delete-Button'; /* Se declara el nombre de la clase para conectar CSS */
+    deleteButton.innerText = "Borrar";    /* Asigna el Texto al Boton borrar */
+    deleteButton.onclick = function() {  /* Borrar el elemento al momento de dar click */
+      deleteTask(index);
+    };
+
+    listItem.appendChild(editButton);  /* Agrega el boton editar al elemento li(ListItem) */
+    listItem.appendChild(deleteButton);  /* Agrega el boton eliminar/borrar al elemento li(ListItem)*/
+    taskList.appendChild(listItem);  /* Agrega el elemento li(ListItem) a la lista de Tareas */
+  });
+}
+
+
+
  /* Funcion para aniadir Tareas al momento de dar click "Agregar".5% */ 
   function addTask() {
    // Obtener el valor del input
@@ -105,4 +143,4 @@
      listItem.appendChild(deleteButton);  /* Agrega el boton eliminar/borrar al elemento li(ListItem)*/
      taskList.appendChild(listItem);  /* Agrega el elemento li(ListItem) a la lista de Tareas */
    });
- }
+ } 
